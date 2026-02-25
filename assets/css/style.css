@@ -190,17 +190,17 @@ ul { list-style: none; }
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1.1rem 0;
+  padding: 1rem 0;
   transition: all var(--transition);
-  background: transparent;
+  background: rgba(10, 26, 24, 0.98);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 24px rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .navbar.scrolled {
-  background: rgba(10, 26, 24, 0.97);
-  backdrop-filter: blur(12px);
   padding: .7rem 0;
-  box-shadow: 0 1px 24px rgba(0,0,0,0.35);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 2px 30px rgba(0,0,0,0.45);
 }
 
 .navbar__inner {
@@ -217,10 +217,17 @@ ul { list-style: none; }
 }
 .navbar__logo-img:hover { opacity: .82; }
 
+/* Desktop: menu fixo alinhado ao topo, mesmo nível do navbar */
 .navbar__menu {
+  position: fixed;
+  top: 0;
+  right: 1.5rem;
+  height: 60px;
   display: flex;
   align-items: center;
   gap: 2.8rem;
+  z-index: 1001;
+  background: transparent;
 }
 
 .nav-link {
@@ -298,7 +305,7 @@ ul { list-style: none; }
 .hero__inner {
   position: relative;
   z-index: 2;
-  padding: 8rem 1.5rem 6rem;
+  padding: 9rem 1.5rem 6rem;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -1172,6 +1179,7 @@ img, video, iframe, embed, object { max-width: 100%; }
 }
 
 @media (max-width: 900px) {
+  /* Mobile: menu vira gaveta lateral */
   .navbar__menu {
     display: none;
     position: fixed;
@@ -1180,6 +1188,7 @@ img, video, iframe, embed, object { max-width: 100%; }
     width: min(280px, 85vw);
     background: var(--dark);
     flex-direction: column;
+    align-items: flex-start;
     padding: 5rem 2rem 2rem;
     gap: 1.8rem;
     z-index: 1002;
@@ -1190,7 +1199,7 @@ img, video, iframe, embed, object { max-width: 100%; }
   }
   .navbar__menu.open { display: flex; }
   .navbar__toggle    { display: flex; z-index: 1003; }
-  .nav-link { font-size: .9rem; letter-spacing: .08em; }
+  .nav-link { font-size: .95rem; letter-spacing: .08em; }
 
   .mercado__inner    { grid-template-columns: 1fr; }
   .mercado__features { grid-template-columns: repeat(2, 1fr); }
