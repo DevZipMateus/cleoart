@@ -277,7 +277,7 @@ ul { list-style: none; }
   align-items: center;
   overflow: hidden;
   background:
-    linear-gradient(160deg, rgba(10,26,24,0.97) 0%, rgba(18,79,72,0.90) 55%, rgba(29,122,111,0.80) 100%),
+    linear-gradient(160deg, rgba(10,70,67,0.78) 0%, rgba(23,196,189,0.60) 50%, rgba(10,70,67,0.72) 100%),
     url('../images/hero-bg.jpg') center / cover no-repeat;
 }
 
@@ -423,12 +423,7 @@ ul { list-style: none; }
    HIGHLIGHTS
    ============================================================ */
 .highlights {
-  background-image:
-    linear-gradient(rgba(10,26,24,0.92), rgba(10,26,24,0.92)),
-    url('../images/highlights-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll, fixed;
+  background: var(--teal-gradient);
   padding: 3.5rem 0;
 }
 
@@ -488,19 +483,14 @@ ul { list-style: none; }
    SOBRE
    ============================================================ */
 .sobre {
-  background-image:
-    linear-gradient(rgba(8, 20, 18, 0.86), rgba(8, 20, 18, 0.86)),
-    url('../images/sobre-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll, fixed;
+  background: #f0fdfc;
 }
 
-.sobre .section__title { color: var(--white); }
-.sobre .section__desc  { color: rgba(255,255,255,0.82); }
-.sobre .section__tag   { color: var(--gold-light); }
+.sobre .section__title { color: var(--gray-900); }
+.sobre .section__desc  { color: var(--gray-500); }
+.sobre .section__tag   { color: var(--teal); }
 .sobre .section__tag::before,
-.sobre .section__tag::after { background: var(--gold-light); }
+.sobre .section__tag::after { background: var(--teal); }
 
 /* Timeline da história */
 .historia__grid {
@@ -511,17 +501,17 @@ ul { list-style: none; }
 }
 
 .historia-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-top: 2px solid var(--orange);
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-top: 2px solid var(--teal);
   border-radius: var(--radius);
   padding: 2rem;
+  box-shadow: var(--shadow);
   transition: all var(--transition);
 }
 
 .historia-card:hover {
-  background: rgba(29,122,111,0.12);
-  border-color: rgba(29,122,111,0.4);
+  box-shadow: var(--shadow-teal);
   border-top-color: var(--orange);
 }
 
@@ -552,13 +542,13 @@ ul { list-style: none; }
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--gray-900);
   margin-bottom: .7rem;
 }
 
 .historia-card__text {
   font-size: .88rem;
-  color: rgba(255,255,255,0.75);
+  color: var(--gray-500);
   line-height: 1.75;
 }
 
@@ -651,19 +641,14 @@ ul { list-style: none; }
    PRODUTOS
    ============================================================ */
 .produtos {
-  background-image:
-    linear-gradient(rgba(8, 20, 18, 0.88), rgba(8, 20, 18, 0.88)),
-    url('../images/produtos-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll, fixed;
+  background: #ffffff;
 }
 
-.produtos .section__title { color: var(--white); }
-.produtos .section__desc  { color: rgba(255,255,255,0.82); }
-.produtos .section__tag   { color: var(--gold-light); }
+.produtos .section__title { color: var(--gray-900); }
+.produtos .section__desc  { color: var(--gray-500); }
+.produtos .section__tag   { color: var(--teal); }
 .produtos .section__tag::before,
-.produtos .section__tag::after { background: var(--gold-light); }
+.produtos .section__tag::after { background: var(--teal); }
 
 .produtos__grid {
   display: grid;
@@ -787,19 +772,14 @@ ul { list-style: none; }
    MERCADO
    ============================================================ */
 .mercado {
-  background-image:
-    linear-gradient(rgba(8, 20, 18, 0.84), rgba(8, 20, 18, 0.84)),
-    url('../images/mercado-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll, fixed;
+  background: #f0fdfc;
 }
 
-.mercado .section__title  { color: var(--white); }
-.mercado .section__tag    { color: var(--gold-light); }
+.mercado .section__title  { color: var(--gray-900); }
+.mercado .section__tag    { color: var(--teal); }
 .mercado .section__tag::before,
-.mercado .section__tag::after { background: var(--gold-light); }
-.mercado .mercado__text p { color: rgba(255,255,255,0.84); }
+.mercado .section__tag::after { background: var(--teal); }
+.mercado .mercado__text p { color: var(--gray-600); }
 
 .mercado__inner {
   display: grid;
@@ -872,25 +852,20 @@ ul { list-style: none; }
    CONTATO
    ============================================================ */
 .contato {
-  background-image:
-    linear-gradient(rgba(8, 20, 18, 0.90), rgba(8, 20, 18, 0.90)),
-    url('../images/contato-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll, fixed;
+  background: #ffffff;
 }
 
-.contato .section__title { color: var(--white); }
-.contato .section__desc  { color: rgba(255,255,255,0.82); }
-.contato .section__tag   { color: var(--gold-light); }
+.contato .section__title { color: var(--gray-900); }
+.contato .section__desc  { color: var(--gray-500); }
+.contato .section__tag   { color: var(--teal); }
 .contato .section__tag::before,
-.contato .section__tag::after { background: var(--gold-light); }
+.contato .section__tag::after { background: var(--teal); }
 
-.contato .contact-item strong   { color: var(--white); }
+.contato .contact-item strong   { color: var(--gray-900); }
 .contato .contact-item p,
-.contato .contact-item a        { color: rgba(255,255,255,0.82); }
-.contato .contact-item a:hover  { color: var(--gold-light); }
-.contato .contact-item__icon    { background: rgba(29,122,111,0.3); color: var(--teal-light); }
+.contato .contact-item a        { color: var(--gray-500); }
+.contato .contact-item a:hover  { color: var(--teal); }
+.contato .contact-item__icon    { background: rgba(23,196,189,0.12); color: var(--teal); }
 
 .contato__grid {
   display: grid;
@@ -974,9 +949,9 @@ ul { list-style: none; }
    FOOTER
    ============================================================ */
 .footer {
-  background: var(--dark);
+  background: linear-gradient(135deg, #0a4a46 0%, #0d5e59 100%);
   padding: 4.5rem 0 0;
-  border-top: 2px solid var(--teal-dark);
+  border-top: 3px solid var(--teal-light);
 }
 
 .footer__inner {
@@ -1329,9 +1304,7 @@ img, video, iframe, embed, object { max-width: 100%; }
 }
 
 @media (max-width: 1024px) {
-  .highlights, .sobre, .produtos, .mercado, .contato {
-    background-attachment: scroll, scroll;
-  }
+  /* parallax removido — seções agora têm fundo sólido */
 
   .container    { max-width: 960px; }
   .section      { padding: 5rem 0; }
