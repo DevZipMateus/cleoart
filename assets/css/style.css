@@ -1298,19 +1298,12 @@ ul { list-style: none; }
 
 /* ============================================================
    PREVENÇÃO GLOBAL DE OVERFLOW
+   — NUNCA aplicar overflow-x: hidden em section ou containers
+     pois o browser converte overflow-y para auto e cria scrollbar interno
    ============================================================ */
-section,
-footer,
-.container,
-.highlights,
-.sobre,
-.produtos,
-.mercado,
-.contato,
-.footer {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
+/* Apenas html e body bloqueiam overflow horizontal */
+html, body { overflow-x: hidden; }
 
 img, video, iframe, embed, object { max-width: 100%; }
 
