@@ -1097,6 +1097,206 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   EFEITOS & ANIMAÇÕES
+   ============================================================ */
+
+/* ---------- ENTRADA DO HERO (page load) ---------- */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__tag {
+  animation: hero-fade-up .7s ease both;
+  animation-delay: .1s;
+}
+
+.hero__title {
+  animation: hero-fade-up .8s ease both;
+  animation-delay: .25s;
+}
+
+.hero__subtitle {
+  animation: hero-fade-up .8s ease both;
+  animation-delay: .4s;
+}
+
+.hero__divider {
+  animation: hero-fade-up .6s ease both;
+  animation-delay: .5s;
+}
+
+.hero__actions {
+  animation: hero-fade-up .8s ease both;
+  animation-delay: .55s;
+}
+
+.hero__logo-wrap {
+  animation: hero-fade-up 1s ease both;
+  animation-delay: .35s;
+}
+
+/* ---------- GRADIENTE ANIMADO no acento do título ---------- */
+.hero__title--accent {
+  background: linear-gradient(90deg, var(--orange-light), var(--gold-light), var(--orange-light));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ---------- BRILHO (SHINE) nos botões ---------- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.btn:hover::after {
+  animation: btn-shine .55s ease forwards;
+}
+
+@keyframes btn-shine {
+  to { left: 160%; }
+}
+
+/* ---------- LINHA ANIMADA sob o section__title ---------- */
+.section__title {
+  position: relative;
+  display: inline-block;
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  transition: width .8s ease;
+}
+
+.section__title.line-visible::after {
+  width: 60px;
+}
+
+/* Títulos alinhados à esquerda (mercado) */
+.mercado__text .section__title::after {
+  left: 0;
+  transform: none;
+}
+
+/* ---------- REVEAL: fade + slide dos elementos ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+
+.reveal.from-left {
+  transform: translateX(-30px);
+}
+
+.reveal.from-right {
+  transform: translateX(30px);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* ---------- HIGHLIGHT CARD: pulse no número ---------- */
+@keyframes count-pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.highlight-card__num.pop {
+  animation: count-pop .4s ease;
+}
+
+/* ---------- HOVER nos historia-card: borda dourada ---------- */
+.historia-card {
+  transition: all .35s ease, border-top-color .35s ease;
+}
+
+.historia-card:hover {
+  border-top-color: var(--gold);
+}
+
+/* ---------- HOVER produto-card: ícone animado ---------- */
+.produto-card__icon {
+  transition: background .3s ease, color .3s ease, transform .3s ease;
+}
+
+.produto-card:hover .produto-card__icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* ---------- MERCADO-FEAT: slide da borda esquerda ---------- */
+.mercado-feat {
+  border-left: 3px solid transparent;
+  transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.mercado-feat:hover {
+  border-left-color: var(--teal);
+  transform: translateX(4px);
+}
+
+/* ---------- FOOTER SOCIAL: rotação suave ---------- */
+.footer__social a {
+  transition: background .3s ease, border-color .3s ease, color .3s ease, transform .3s ease;
+}
+
+.footer__social a:hover {
+  transform: translateY(-3px) rotate(5deg);
+}
+
+/* ---------- WHATSAPP: anel de pulso ---------- */
+@keyframes wa-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+.whatsapp-float {
+  animation: wa-ring 2s ease infinite;
+}
+
+.whatsapp-float:hover {
+  animation: none;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.55);
+}
+
+/* ---------- NAVBAR LINK: underline colorido animado ---------- */
+.nav-link::after {
+  background: linear-gradient(90deg, var(--teal-light), var(--gold-light));
+  height: 1.5px;
+}
+
+/* ============================================================
    PREVENÇÃO GLOBAL DE OVERFLOW
    ============================================================ */
 section,
