@@ -135,51 +135,6 @@ ul { list-style: none; }
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
 }
 
-/* ── BOTÕES VITRINE ── */
-.btn--vitrine-header {
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  padding: .5rem 1.2rem;
-  background: var(--teal-gradient);
-  color: var(--white);
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  border-radius: var(--radius);
-  border: 2px solid var(--teal);
-  transition: all var(--transition);
-  white-space: nowrap;
-}
-.btn--vitrine-header:hover {
-  background: radial-gradient(circle at 60% 60%, #2EDBD4, #0D9A95);
-  box-shadow: var(--shadow-teal);
-  transform: translateY(-1px);
-}
-
-.btn--vitrine-hero {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .85rem 2.2rem;
-  background: transparent;
-  color: var(--teal-light);
-  font-size: .92rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  border-radius: var(--radius);
-  border: 2px solid var(--teal-border);
-  transition: all var(--transition);
-}
-.btn--vitrine-hero:hover {
-  background: var(--teal-glow);
-  border-color: var(--teal);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
 .btn--vitrine-banner {
   display: inline-flex;
   align-items: center;
@@ -1549,9 +1504,6 @@ img, video, iframe, embed, object { max-width: 100%; }
   }
   /* Ativa hambúrguer */
   .navbar__toggle { display: flex; z-index: 1003; }
-  /* Oculta botão vitrine no header em mobile (aparece no menu lateral) */
-  .btn--vitrine-header { display: none; }
-
   /* Menu lateral (gaveta) */
   .navbar__menu {
     display: none;
