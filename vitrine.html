@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitrine — CléoArt Camisaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ── Trava scroll da página ── */
+    html, body {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* ── Header fixo 80px ── */
+    .navbar {
+      height: 80px !important;
+      background: var(--dark) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,.3) !important;
+    }
+
+    /* ── Iframe ocupa 100vh - 80px (header) - 63px (badge) ── */
+    .vitrine-wrap {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      bottom: 63px;
+      width: 100%;
+    }
+
+    .vitrine-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ── Badge inferior 63px ── */
+    .vitrine-badge {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 63px;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 500;
+      border-top: 1px solid rgba(23,196,189,.15);
+    }
+
+    .vitrine-badge img {
+      height: 34px;
+      width: auto;
+      filter: brightness(0) invert(1) opacity(.75);
+    }
+
+    .vitrine-badge .badge-sep {
+      width: 1px;
+      height: 22px;
+      background: rgba(255,255,255,.18);
+    }
+
+    .vitrine-badge span {
+      color: rgba(255,255,255,.5);
+      font-family: var(--font);
+      font-size: .8rem;
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="CléoArt Camisaria" class="navbar__logo-img" />
+      </a>
+      <a href="index.html" class="btn btn--outline" style="font-size:.8rem; padding:.55rem 1.4rem;">
+        <i class="fas fa-arrow-left"></i> Voltar ao site
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== IFRAME ===== -->
+  <div class="vitrine-wrap" id="vitrineWrap">
+    <iframe
+      src="https://cleoartcamisaria.egestor.com.br/vitrine/"
+      title="Vitrine CléoArt Camisaria"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <!-- ===== BADGE ===== -->
+  <div class="vitrine-badge">
+    <img src="assets/images/logo.png" alt="CléoArt" />
+    <div class="badge-sep"></div>
+    <span>© 2024 CléoArt Camisaria — Todos os direitos reservados</span>
+  </div>
+
+  <script>
+    function resizeWrap() {
+      const wrap = document.getElementById('vitrineWrap');
+      wrap.style.height = (window.innerHeight - 80 - 63) + 'px';
+    }
+    window.addEventListener('resize', resizeWrap);
+    resizeWrap();
+  </script>
+
+</body>
+</html>
