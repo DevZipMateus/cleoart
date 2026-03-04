@@ -433,14 +433,20 @@ ul { list-style: none; }
   align-items: center;
   gap: .6rem;
   color: var(--gold-light);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .22em;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .18em;
   text-transform: uppercase;
   margin-bottom: 1.8rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(201,162,101,0.35);
+  border-radius: 999px;
+  padding: .45rem 1.1rem;
 }
 
-.hero__tag i { font-size: .8rem; }
+.hero__tag strong { color: #fff; font-weight: 800; }
+
+.hero__tag i { font-size: .85rem; }
 
 /* Linha decorativa antes da tag */
 .hero__tag::before {
