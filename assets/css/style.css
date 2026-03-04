@@ -366,7 +366,7 @@ ul { list-style: none; }
   align-items: center;
   overflow: hidden;
   background:
-    linear-gradient(160deg, rgba(10,50,48,0.65) 0%, rgba(23,196,189,0.38) 50%, rgba(10,50,48,0.60) 100%),
+    linear-gradient(160deg, rgba(23,196,189,0.18) 0%, rgba(23,196,189,0.12) 50%, rgba(23,196,189,0.16) 100%),
     url('../images/hero-bg.jpg') center / cover no-repeat;
 }
 
@@ -405,6 +405,11 @@ ul { list-style: none; }
 
 .hero__content {
   max-width: 640px;
+  background: rgba(0, 0, 0, 0.60);
+  border-radius: 18px;
+  padding: 2.4rem 2.8rem;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 /* Logo à direita do hero */
