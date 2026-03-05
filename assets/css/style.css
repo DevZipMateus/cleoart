@@ -404,12 +404,14 @@ ul { list-style: none; }
 }
 
 .hero__content {
-  max-width: 640px;
+  width: 100%;
+  max-width: 760px;
   background: rgba(0, 0, 0, 0.60);
   border-radius: 18px;
-  padding: 2rem 2.2rem;
+  padding: 2rem 2.5rem;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  box-sizing: border-box;
 }
 
 /* Logo à direita do hero */
@@ -475,14 +477,12 @@ ul { list-style: none; }
   letter-spacing: -.02em;
   display: flex;
   flex-direction: column;
-  white-space: nowrap;
 }
 
 .hero__title--accent { color: var(--orange-light); }
 
-/* Garante 1 linha por span em TODOS os breakpoints */
+/* Cada span ocupa sua própria linha */
 .hero__title span {
-  white-space: nowrap;
   display: block;
 }
 
